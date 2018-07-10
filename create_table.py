@@ -2,7 +2,7 @@
 import MySQLdb
 
 connector = MySQLdb.connect(host="mysql", port=3306,
-    db="mysql", user="root", passwd="pass", charset="utf8")
+    db="db", user="root", passwd="pass", charset="utf8")
 cursor = connector.cursor()
 
 sql = "create table shop_info(" + \

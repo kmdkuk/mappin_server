@@ -3,4 +3,5 @@ mysql-python
 sqlalchemy
 flask-sqlalchemy
 flask-migrate
+Flask-Script
 

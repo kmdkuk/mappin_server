@@ -1,6 +1,6 @@
 # coding: utf-8
 from flask.ext.sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, Unicode, UnicodeText, ForeignKey
+from sqlalchemy import Column, Integer, Unicode, UnicodeText, ForeignKey, DateTime
 from sqlalchemy.orm import relationship, backref
 from datetime import datetime
 
@@ -29,7 +29,7 @@ class File(db.Model):
   latitude = Column(Unicode(255)) # 緯度
   longitude = Column(Unicode(255)) # 経度
   area_radius = Column(Unicode(255))
-  installation_datetime = Column(DATETIME, default=datetime.now)
+  installation_datetime = Column(DateTime, default=datetime.now)
   company_id = Column(Integer, ForeignKey('companies.id'))
 
   file = relationship("Company", backref=backref('files', order_by=id))
